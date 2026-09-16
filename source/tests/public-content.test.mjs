@@ -16,8 +16,16 @@ test('anonymous defense research has no public manuscript metadata or links', ()
 test('public resources point to the supplied paper, account and independent project', () => {
   assert.equal(profile.email, 'jingsongwang@tongji.edu.cn');
   assert.equal(papers[0].paperUrl, 'https://arxiv.org/abs/2608.25490');
-  assert.equal(projects[0].websiteUrl, 'https://jingsong-wang.github.io/fruit-fly/');
+  assert.equal(projects[0].websiteUrl, 'https://jingsong-wang.github.io/fruit-fly/brain/');
   assert.equal(projects[0].codeUrl, 'https://github.com/jingsong-wang/fruit-fly');
+});
+
+test('digital fly description reflects the current experiment and model boundaries', () => {
+  assert.equal(projects[0].subtitle, 'Interactive Digital Fly');
+  assert.ok(!/pong/i.test(JSON.stringify(projects)));
+  assert.match(projects[0].description, /FlyWire/);
+  assert.match(projects[0].description, /MN9/);
+  assert.match(projects[0].note, /engineered/);
 });
 
 test('production metadata enables indexing at the correct canonical homepage', async () => {

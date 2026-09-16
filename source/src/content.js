@@ -34,9 +34,9 @@ export const awards = [
 ];
 export const projects = [
   {
-    name: 'FLYLAB', subtitle: 'A fruit-fly-inspired Pong experiment',
-    description: 'A browser-based playground where a neural controller built from a reduced, public Drosophila visual connectome plays Pong. Explore live neural activity, compare shuffled connections and random-action baselines, switch off sensory input, or take manual control.',
-    note: 'A simplified circuit with a calibrated game interface, not a full-brain simulation.',
-    websiteUrl: 'https://jingsong-wang.github.io/fruit-fly/', codeUrl: 'https://github.com/jingsong-wang/fruit-fly',
+    name: 'FLYLAB', subtitle: 'Interactive Digital Fly',
+    description: 'An interactive 3D feeding arena built on the public FlyWire 630 connectome, with 127,400 neurons and simplified spiking dynamics running locally in the browser. Add sugar, observe sensory signals propagate to MN9 feeding output, and explore causal interventions by cutting sensory input or silencing motor output.',
+    note: 'Walking and body animation are engineered; this is not a complete biological digital twin or a full physics simulation.',
+    websiteUrl: 'https://jingsong-wang.github.io/fruit-fly/brain/', codeUrl: 'https://github.com/jingsong-wang/fruit-fly',
   },
 ];

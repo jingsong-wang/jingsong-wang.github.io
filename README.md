@@ -22,7 +22,7 @@ The export command prints a fresh `.local/github-pages-*` directory containing b
 
 - MMJailBench: https://arxiv.org/abs/2608.25490
 - FLYLAB code and model boundaries: https://github.com/jingsong-wang/fruit-fly
-- FLYLAB demo: https://jingsong-wang.github.io/fruit-fly/
+- FLYLAB digital fly: https://jingsong-wang.github.io/fruit-fly/brain/
 - Education, contact details, and awards were supplied by the site owner.
 
 The defense entry intentionally contains only a general research overview. Do not add private manuscript metadata or files without the owner's explicit instruction.
