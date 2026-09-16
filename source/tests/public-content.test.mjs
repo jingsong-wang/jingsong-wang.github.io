@@ -1,7 +1,17 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
-import { profile, papers, projects } from '../src/content.js';
+import { profile, papers, projects, education, awards } from '../src/content.js';
+
+test('education dates and award updates match the supplied profile', () => {
+  assert.deepEqual(education.map(item => item.dates), ['2026-present', '2022-2026']);
+  assert.equal(education[1].status, 'Outstanding graduate');
+  assert.equal(awards.length, 6);
+  assert.ok(awards.every(award => /202[345]/.test(award.context)));
+  assert.match(awards[1].context, /Nanjing Regional \(2025\).*Shenyang Regional \(2024\)/);
+  assert.equal(awards[5].detail, 'First Prize');
+  assert.equal(awards[5].context, 'National Final / 2023');
+});
 
 test('anonymous defense research has no public manuscript metadata or links', () => {
   const defense = papers.find(paper => paper.id === 'defense');

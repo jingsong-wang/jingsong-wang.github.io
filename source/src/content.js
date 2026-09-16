@@ -22,15 +22,16 @@ export const papers = [
   },
 ];
 export const education = [
-  { degree: 'Graduate studies', status: 'In progress', institution: 'Tongji University', school: 'School of Computer Science and Technology', location: 'Shanghai, China', dates: null },
-  { degree: "Bachelor's degree", status: null, institution: 'Huazhong Agricultural University', school: 'College of Informatics', location: 'Wuhan, China', dates: null },
+  { degree: 'Graduate studies', status: 'In progress', institution: 'Tongji University', school: 'School of Computer Science and Technology', location: 'Shanghai, China', dates: '2026-present' },
+  { degree: "Bachelor's degree", status: 'Outstanding graduate', institution: 'Huazhong Agricultural University', school: 'College of Informatics', location: 'Wuhan, China', dates: '2022-2026' },
 ];
 export const awards = [
-  { name: 'CCF Elite Collegiate Award', detail: 'China Computer Federation' },
-  { name: 'ICPC Asia Regional Contests', detail: 'Bronze medals', context: '49th Shenyang Regional / 50th Nanjing Regional' },
-  { name: 'CCPC National Invitational Contests', detail: 'Silver awards', context: 'Zhengzhou / Shandong' },
-  { name: '16th Lanqiao Cup National Final', detail: 'Second Prize', context: 'C/C++ Group A' },
-  { name: 'Group Programming Ladder Tournament', detail: 'Second Prize', context: 'National Final' },
+  { name: 'CCF Elite Collegiate Award', detail: 'China Computer Federation', context: '2025' },
+  { name: 'ICPC Asia Regional Contests', detail: 'Bronze medals', context: '50th Nanjing Regional (2025) / 49th Shenyang Regional (2024)' },
+  { name: 'CCPC National Invitational Contests', detail: 'Silver awards', context: 'Zhengzhou (2024) / Shandong (2024)' },
+  { name: '16th Lanqiao Cup National Final', detail: 'Second Prize', context: 'C/C++ Group A / 2025' },
+  { name: 'Group Programming Ladder Tournament', detail: 'Second Prize', context: 'National Final / 2024' },
+  { name: 'National Computer Competition for Colleges and Universities', detail: 'First Prize', context: 'National Final / 2023' },
 ];
 export const projects = [
   {
