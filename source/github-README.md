@@ -20,6 +20,9 @@ The export command prints a fresh `.local/github-pages-*` directory containing b
 
 ## Public Sources
 
+- AI Flip Photo: https://jingsong-wang.github.io/ai-flip-photo/
+- AI Flip Photo code and experiment boundaries: https://github.com/jingsong-wang/ai-flip-photo
+
 - MMJailBench: https://arxiv.org/abs/2608.25490
 - FLYLAB code and model boundaries: https://github.com/jingsong-wang/fruit-fly
 - FLYLAB digital fly: https://jingsong-wang.github.io/fruit-fly/brain/

@@ -26,16 +26,16 @@ test('anonymous defense research has no public manuscript metadata or links', ()
 test('public resources point to the supplied paper, account and independent project', () => {
   assert.equal(profile.email, 'jingsongwang@tongji.edu.cn');
   assert.equal(papers[0].paperUrl, 'https://arxiv.org/abs/2608.25490');
-  assert.equal(projects[0].websiteUrl, 'https://jingsong-wang.github.io/fruit-fly/brain/');
-  assert.equal(projects[0].codeUrl, 'https://github.com/jingsong-wang/fruit-fly');
+  assert.equal(projects.find(project => project.name === 'FLYLAB').websiteUrl, 'https://jingsong-wang.github.io/fruit-fly/brain/');
+  assert.equal(projects.find(project => project.name === 'FLYLAB').codeUrl, 'https://github.com/jingsong-wang/fruit-fly');
 });
 
 test('digital fly description reflects the current experiment and model boundaries', () => {
-  assert.equal(projects[0].subtitle, 'Interactive Digital Fly');
+  assert.equal(projects.find(project => project.name === 'FLYLAB').subtitle, 'Interactive Digital Fly');
   assert.ok(!/pong/i.test(JSON.stringify(projects)));
-  assert.match(projects[0].description, /FlyWire/);
-  assert.match(projects[0].description, /MN9/);
-  assert.match(projects[0].note, /engineered/);
+  assert.match(projects.find(project => project.name === 'FLYLAB').description, /FlyWire/);
+  assert.match(projects.find(project => project.name === 'FLYLAB').description, /MN9/);
+  assert.match(projects.find(project => project.name === 'FLYLAB').note, /engineered/);
 });
 
 test('production metadata enables indexing at the correct canonical homepage', async () => {
@@ -43,4 +43,12 @@ test('production metadata enables indexing at the correct canonical homepage', a
   assert.ok(html.includes('https://jingsong-wang.github.io/'));
   assert.ok(html.includes('Jingsong Wang | MLLM Safety'));
   assert.ok(!html.includes('noindex'));
+});
+
+test('image-scaling exhibit links to the verified project and states its scope', () => {
+  const exhibit = projects.find(project => project.name === 'AI Flip Photo');
+  assert.equal(exhibit.websiteUrl, 'https://jingsong-wang.github.io/ai-flip-photo/');
+  assert.equal(exhibit.codeUrl, 'https://github.com/jingsong-wang/ai-flip-photo');
+  assert.match(exhibit.description, /locally in the browser/);
+  assert.match(exhibit.note, /no model inference/);
 });

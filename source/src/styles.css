@@ -89,6 +89,7 @@ h4 { font-size: 16px; line-height: 1.55; font-weight: 400; }
 .projects { margin-bottom: 56px; }
 .project { display: grid; grid-template-columns: 65px minmax(0,1fr) auto; gap: 24px; padding-top: 7px; }
 .project-number { font-size: 17px; color: var(--muted); padding-top: 6px; }
+.project + .project { margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); }
 .project h3 { font-size: 23px; line-height: 1.35; }
 .project p { margin-top: 5px; color: var(--muted); }
 .project-subtitle { display: block; font-size: 16px; font-weight: 400; margin-block: 6px 13px; }

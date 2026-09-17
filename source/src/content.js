@@ -35,6 +35,12 @@ export const awards = [
 ];
 export const projects = [
   {
+    name: 'AI Flip Photo', subtitle: 'MISREAD LAB / Image-Scaling Security',
+    description: 'An interactive demonstration of how one image can reveal different content when downscaled. Compare sampling algorithms and resolutions, inspect the underlying pixels, create examples from your own images, and export the constructed PNG. All image processing runs locally in the browser.',
+    note: 'An educational image-preprocessing experiment, not a measured jailbreak against an AI model; no model inference or photo upload is involved.',
+    websiteUrl: 'https://jingsong-wang.github.io/ai-flip-photo/', codeUrl: 'https://github.com/jingsong-wang/ai-flip-photo',
+  },
+  {
     name: 'FLYLAB', subtitle: 'Interactive Digital Fly',
     description: 'An interactive 3D feeding arena built on the public FlyWire 630 connectome, with 127,400 neurons and simplified spiking dynamics running locally in the browser. Add sugar, observe sensory signals propagate to MN9 feeding output, and explore causal interventions by cutting sensory input or silencing motor output.',
     note: 'Walking and body animation are engineered; this is not a complete biological digital twin or a full physics simulation.',
