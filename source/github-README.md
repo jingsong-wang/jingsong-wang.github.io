@@ -20,6 +20,8 @@ The export command prints a fresh `.local/github-pages-*` directory containing b
 
 ## Public Sources
 
+- Sticker Challenge: https://jingsong-wang.github.io/sticker-challenge/
+
 - AI Flip Photo: https://jingsong-wang.github.io/ai-flip-photo/
 - AI Flip Photo code and experiment boundaries: https://github.com/jingsong-wang/ai-flip-photo
 

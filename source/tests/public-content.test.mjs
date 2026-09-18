@@ -3,6 +3,15 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { profile, papers, projects, education, awards } from '../src/content.js';
 
+test('sticker challenge describes local CLIP classification with controls', () => {
+  const project = projects.find(item => item.name === 'Sticker Challenge');
+  assert.equal(project.websiteUrl, 'https://jingsong-wang.github.io/sticker-challenge/');
+  assert.equal(project.codeUrl, 'https://github.com/jingsong-wang/sticker-challenge');
+  assert.match(project.description, /CLIP locally in the browser/);
+  assert.match(project.description, /blank-sticker controls/);
+  assert.match(project.note, /not instruction following or an MLLM jailbreak/);
+});
+
 test('education dates and award updates match the supplied profile', () => {
   assert.deepEqual(education.map(item => item.dates), ['2026-present', '2022-2026']);
   assert.equal(education[1].status, 'Outstanding graduate');

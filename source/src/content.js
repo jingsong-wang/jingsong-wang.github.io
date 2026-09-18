@@ -35,6 +35,12 @@ export const awards = [
 ];
 export const projects = [
   {
+    name: 'Sticker Challenge', subtitle: 'MISREAD LAB / Typographic Attacks',
+    description: 'A three-level interactive challenge exploring how text stickers can change visual classification. Design and position a sticker, run CLIP locally in the browser, compare the original image with text and blank-sticker controls, and export your results.',
+    note: 'Scores rank a fixed set of candidate labels, not real-world confidence. This demonstrates CLIP classification changes, not instruction following or an MLLM jailbreak.',
+    websiteUrl: 'https://jingsong-wang.github.io/sticker-challenge/', codeUrl: 'https://github.com/jingsong-wang/sticker-challenge',
+  },
+  {
     name: 'AI Flip Photo', subtitle: 'MISREAD LAB / Image-Scaling Security',
     description: 'An interactive demonstration of how one image can reveal different content when downscaled. Compare sampling algorithms and resolutions, inspect the underlying pixels, create examples from your own images, and export the constructed PNG. All image processing runs locally in the browser.',
     note: 'An educational image-preprocessing experiment, not a measured jailbreak against an AI model; no model inference or photo upload is involved.',
