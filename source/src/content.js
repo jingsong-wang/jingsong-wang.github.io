@@ -9,19 +9,19 @@ export const papers = [
   {
     id: 'evaluation', category: 'Evaluation',
     title: 'Multimodal Safety Evaluation',
-    authors: [], venue: 'Ongoing research',
+    authors: [], venue: 'Feb-May 2026',
     summary: 'Studying the safety and robustness of multimodal models through systematic evaluation.',
     paperUrl: null, pdfUrl: null, codeUrl: null,
   },
   {
     id: 'defense', category: 'Defense', title: 'Reliable Safety Defenses',
-    authors: [], venue: 'Ongoing research',
+    authors: [], venue: 'Jul-Sep 2026',
     summary: 'Exploring defenses that reduce harmful responses while preserving useful assistance on benign requests.',
     paperUrl: null, pdfUrl: null, codeUrl: null,
   },
   {
     id: 'video', category: 'Video Safety', title: 'Video-Language Model Safety',
-    authors: [], venue: 'Ongoing research',
+    authors: [], venue: 'Sep-Oct 2026 (expected) / In progress',
     summary: 'Investigating safety and robustness in video-based understanding and interaction.',
     paperUrl: null, pdfUrl: null, codeUrl: null,
   },

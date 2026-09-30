@@ -25,7 +25,7 @@ test('education dates and award updates match the supplied profile', () => {
 test('anonymous defense research has no public manuscript metadata or links', () => {
   const defense = papers.find(paper => paper.id === 'defense');
   assert.equal(defense.title, 'Reliable Safety Defenses');
-  assert.equal(defense.venue, 'Ongoing research');
+  assert.equal(defense.venue, 'Jul-Sep 2026');
   assert.deepEqual(defense.authors, []);
   assert.equal(defense.paperUrl, null);
   assert.equal(defense.pdfUrl, null);
@@ -35,6 +35,7 @@ test('anonymous defense research has no public manuscript metadata or links', ()
 test('public resources point to the supplied paper, account and independent project', () => {
   assert.equal(profile.email, 'jingsongwang@tongji.edu.cn');
   assert.equal(papers.length, 3);
+  assert.deepEqual(papers.map(paper => paper.venue), ['Feb-May 2026', 'Jul-Sep 2026', 'Sep-Oct 2026 (expected) / In progress']);
   assert.ok(papers.every(paper => paper.paperUrl === null && paper.pdfUrl === null && paper.codeUrl === null && paper.authors.length === 0));
   assert.ok(!/arxiv|MMJailBench|2608\.25490/i.test(JSON.stringify(papers)));
   assert.equal(projects.find(project => project.name === 'FLYLAB').websiteUrl, 'https://jingsong-wang.github.io/fruit-fly/brain/');
