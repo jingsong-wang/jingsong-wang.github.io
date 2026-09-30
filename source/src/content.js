@@ -7,17 +7,22 @@ export const profile = {
 };
 export const papers = [
   {
-    id: 'mmjailbench', category: 'Benchmark',
-    title: 'MMJailBench: A Factorized Benchmark for Disentangling Multimodal Jailbreak Vulnerabilities',
-    authors: ['Tianshi Wang', 'Jingsong Wang', 'Yafei Huang', 'Fengling Li', 'Xin Li', 'Lei Zhu'],
-    venue: 'arXiv preprint, 2026',
-    summary: 'A controlled benchmark that disentangles harmful intent, prompt framing, visual semantics, and instruction carriers to trace the sources of multimodal jailbreak vulnerability. Evaluations across 16 models reveal distinct safety profiles and support reproducible, factor-level auditing.',
-    paperUrl: 'https://arxiv.org/abs/2608.25490', pdfUrl: 'https://arxiv.org/pdf/2608.25490', codeUrl: null,
+    id: 'evaluation', category: 'Evaluation',
+    title: 'Multimodal Safety Evaluation',
+    authors: [], venue: 'Ongoing research',
+    summary: 'Studying the safety and robustness of multimodal models through systematic evaluation.',
+    paperUrl: null, pdfUrl: null, codeUrl: null,
   },
   {
-    id: 'defense', category: 'Defense', title: 'Multimodal safety defenses',
+    id: 'defense', category: 'Defense', title: 'Reliable Safety Defenses',
     authors: [], venue: 'Ongoing research',
-    summary: 'I study inference-time defenses for vision-language models, aiming to reduce harmful responses while preserving useful assistance on benign requests.',
+    summary: 'Exploring defenses that reduce harmful responses while preserving useful assistance on benign requests.',
+    paperUrl: null, pdfUrl: null, codeUrl: null,
+  },
+  {
+    id: 'video', category: 'Video Safety', title: 'Video-Language Model Safety',
+    authors: [], venue: 'Ongoing research',
+    summary: 'Investigating safety and robustness in video-based understanding and interaction.',
     paperUrl: null, pdfUrl: null, codeUrl: null,
   },
 ];

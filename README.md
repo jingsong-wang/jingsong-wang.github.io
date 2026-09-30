@@ -25,7 +25,7 @@ The export command prints a fresh `.local/github-pages-*` directory containing b
 - AI Flip Photo: https://jingsong-wang.github.io/ai-flip-photo/
 - AI Flip Photo code and experiment boundaries: https://github.com/jingsong-wang/ai-flip-photo
 
-- MMJailBench: https://arxiv.org/abs/2608.25490
+- Ongoing research is described only at the research-direction level, without manuscript titles or links.
 - FLYLAB code and model boundaries: https://github.com/jingsong-wang/fruit-fly
 - FLYLAB digital fly: https://jingsong-wang.github.io/fruit-fly/brain/
 - Education, contact details, and awards were supplied by the site owner.

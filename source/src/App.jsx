@@ -88,7 +88,7 @@ export function App() {
         </div>
 
         <section id="research" aria-labelledby="research-heading" className="section research" data-reveal>
-          <SectionHeading number="01" title="Research" id="research-heading" />
+          <SectionHeading number="01" title="Research Interests & Ongoing Work" id="research-heading" />
           <div className="paper-list">
             {papers.map(paper => <article className="paper" key={paper.id}>
               <p className="paper-category">{paper.category}</p>
