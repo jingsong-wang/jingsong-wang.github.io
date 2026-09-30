@@ -3,6 +3,15 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { profile, papers, projects, education, awards } from '../src/content.js';
 
+test('reward playground links to its public site and describes local learning accurately', () => {
+  const project = projects.find(item => item.codeUrl === 'https://github.com/jingsong-wang/reward-lab');
+  assert.equal(project.websiteUrl, 'https://jingsong-wang.github.io/reward-lab/');
+  assert.match(project.description, /tabular Q-learning running locally in the browser/);
+  assert.match(project.description, /creative workshop/);
+  assert.match(project.note, /not an LLM or physical robot demonstration/);
+  assert.equal(projects.length, 4);
+});
+
 test('sticker challenge describes local CLIP classification with controls', () => {
   const project = projects.find(item => item.name === 'Sticker Challenge');
   assert.equal(project.websiteUrl, 'https://jingsong-wang.github.io/sticker-challenge/');

@@ -40,6 +40,12 @@ export const awards = [
 ];
 export const projects = [
   {
+    name: 'The Reward Trap / AI 打工翻车记', subtitle: 'MISREAD LAB / Reward Hacking',
+    description: 'An interactive playground for reward misspecification, powered by tabular Q-learning running locally in the browser. Adjust rewards across three office tasks, compare learned behavior with actual task outcomes, and build custom environments in the creative workshop. Export experiment records for reproducible exploration.',
+    note: 'Small educational environments for specification gaming, not an LLM or physical robot demonstration; learned behavior does not imply deceptive intent or general safety guarantees.',
+    websiteUrl: 'https://jingsong-wang.github.io/reward-lab/', codeUrl: 'https://github.com/jingsong-wang/reward-lab',
+  },
+  {
     name: 'Sticker Challenge', subtitle: 'MISREAD LAB / Typographic Attacks',
     description: 'A three-level interactive challenge exploring how text stickers can change visual classification. Design and position a sticker, run CLIP locally in the browser, compare the original image with text and blank-sticker controls, and export your results.',
     note: 'Scores rank a fixed set of candidate labels, not real-world confidence. This demonstrates CLIP classification changes, not instruction following or an MLLM jailbreak.',
