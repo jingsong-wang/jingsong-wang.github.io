@@ -47,6 +47,18 @@ h1 { font-size: 65px; font-weight: 700; line-height: 1.13; overflow-wrap: anywhe
 .socials .text-link { gap: 10px; }
 .socials .text-link + .text-link { border-left: 1px solid #c4c1bd; margin-left: 20px; padding-left: 20px; }
 .socials svg { color: #171717; }
+.profile-like { position: relative; display: inline-flex; border-left: 1px solid #c4c1bd; margin-left: 20px; padding-left: 16px; }
+.like-button { display: inline-flex; align-items: center; justify-content: flex-start; gap: 8px; min-width: 76px; height: 36px; border: 0; background: transparent; padding: 0 4px; color: var(--muted); font-size: 13px; }
+.like-button svg { color: inherit; flex-shrink: 0; }
+.like-button:hover, .like-button.is-liked { color: var(--accent); }
+.like-button:disabled { cursor: default; opacity: .6; }
+.like-count { min-width: 4ch; font-variant-numeric: tabular-nums; }
+.like-button.is-liked svg { animation: heart-pop 240ms ease-out; }
+.like-tooltip { position: absolute; z-index: 20; top: calc(100% + 8px); right: 0; width: max-content; max-width: min(250px, 75vw); padding: 7px 10px; border: 1px solid var(--line); border-radius: 4px; color: #333; background: #fff; font: 12px/1.5 Arial, sans-serif; opacity: 0; visibility: hidden; pointer-events: none; }
+.profile-like:hover .like-tooltip, .profile-like:focus-within .like-tooltip { opacity: 1; visibility: visible; }
+.like-announcement { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes heart-pop { 50% { transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) { .like-button.is-liked svg { animation: none; } }
 .text-link { display: inline-flex; gap: 8px; align-items: center; border: 0; background: transparent; padding: 3px 0; color: var(--accent); line-height: 1.5; text-align: left; transition: color 150ms ease; }
 .text-link:hover { color: #701015; text-decoration: underline; text-underline-offset: 5px; }
 .text-link svg { flex-shrink: 0; transition: transform 180ms ease; }

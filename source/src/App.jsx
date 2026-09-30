@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ArrowUp, Github, GraduationCap, Mail, Menu, X } from 'lucide-react';
 import { profile, papers, education, awards, projects } from './content';
+import { LikeButton } from './LikeButton';
 
 const navigation = [
   { label: 'Research', id: 'research' },
@@ -83,6 +84,7 @@ export function App() {
               <ResourceLink href={profile.email ? `mailto:${profile.email}` : null}><Mail size={22} strokeWidth={1.6} /><span>Email</span></ResourceLink>
               <ResourceLink href={profile.github}><Github size={21} strokeWidth={1.6} /><span>GitHub</span></ResourceLink>
               <ResourceLink href={profile.scholar}><GraduationCap size={24} strokeWidth={1.6} /><span>Scholar</span></ResourceLink>
+              <LikeButton />
             </div>
           </div>
         </div>

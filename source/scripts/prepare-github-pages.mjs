@@ -12,6 +12,7 @@ const sources = [
   'src', 'public', 'index.html', 'vite.config.mjs',
   'pnpm-lock.yaml', 'pnpm-workspace.yaml',
   'scripts/prepare-github-pages.mjs', 'tests/public-content.test.mjs',
+  'tests/likes.test.mjs', 'likes-worker',
 ];
 for (const source of sources) {
   const target = join(stage, 'source', source);
@@ -23,6 +24,7 @@ config.scripts = {
   dev: 'vite', build: 'vite build',
   'build:github': 'vite build && node scripts/prepare-github-pages.mjs',
   'test:public': 'node --test tests/public-content.test.mjs',
+  'test:likes': 'node --test tests/likes.test.mjs',
 };
 await writeFile(join(stage, 'source/package.json'), `${JSON.stringify(config, null, 2)}\n`);
 await cp(join(project, 'github-README.md'), join(stage, 'README.md'));

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:github": "vite build && node scripts/prepare-github-pages.mjs",
-    "test:public": "node --test tests/public-content.test.mjs"
+    "test:public": "node --test tests/public-content.test.mjs",
+    "test:likes": "node --test tests/likes.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "5.0.4",
