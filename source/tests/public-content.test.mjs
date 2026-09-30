@@ -3,6 +3,16 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { profile, papers, projects, education, awards } from '../src/content.js';
 
+test('favicon uses a font-independent W and the homepage red dot', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const icon = await readFile(new URL('../public/favicon-w.svg', import.meta.url), 'utf8');
+  assert.match(html, /rel="icon" type="image\/svg\+xml" href="\/favicon-w.svg"/);
+  assert.match(icon, /<title>W\.<\/title>/);
+  assert.match(icon, /<path fill="#252525"/);
+  assert.match(icon, /<circle[^>]+fill="#ab161b"/);
+  assert.ok(!icon.includes('<text'));
+});
+
 test('reward playground links to its public site and describes local learning accurately', () => {
   const project = projects.find(item => item.codeUrl === 'https://github.com/jingsong-wang/reward-lab');
   assert.equal(project.websiteUrl, 'https://jingsong-wang.github.io/reward-lab/');
